@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf8">
     <title>Produtos da Barbearia do Snow</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="caixa">
-            <h1><img src="img/logo44.png"></h1>
+            <h1><img src="img/logo44.png" alt="Logo barbearia do snow"></h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -21,25 +22,69 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main-contato">
         <form>
             <label for="nomesobrenome">Nome e Sobrenome</label>
-            <input type="text" id="nomesobrenome">
+            <input type="text" id="nomesobrenome" class="input-padrao" required>
 
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="email" id="email" class="input-padrao" required placeholder="email@dominio.com">
 
             <label for="telefone">Telefone</label>
-            <input type="text" id="telefone">
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
 
-            <input type="submit" value="Enviar Formulário">
+            <label for="mensagem">Mensagem</label>
+            <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+            <fieldset>
+                <legend>Como você Prefere o nosso Contato ??</legend>
 
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone"
+                        id="radio-telefone">Telefone</label>
+
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"
+                        checked>WhatsApp</label>
+            </fieldset>
+            <fieldset>
+                <legend> Qual Horário prefere ser Atendido</legend>
+                <select>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked> Quer receber nossas novidades por e-mail ??</label>
+
+            <input type="submit" value="Enviar Formulário" class="enviar">
         </form>
-
-
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th class="th">Dia</th>
+                    <th class="th"> Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td">Segunda</td>
+                    <td class="td">08~20h</td>
+                </tr>
+                <tr>
+                    <td class="td">Quarta</td>
+                    <td class="td">08~20h</td>
+                </tr>
+                <tr>
+                    <td class="td">Sexta</td>
+                    <td class="td">08~20h</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
-        <img src="img/logo45.png">
+        <img src="img/logo45.png" alt="Logo barbearia do snow">
         <p class="copyright">&copy;Copyright Barbearia do Snow - 2020</p>
     </footer>
 </body>
